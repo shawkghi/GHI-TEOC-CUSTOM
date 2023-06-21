@@ -94,7 +94,7 @@ export const defaultChannelConstants = {
     ERGSafety: "Safety Officer",
     ERGLegal: "Legal",
     ERGCOOP: "Continuity of Operations",
-    ERGMH:"Mental Health",
+    ERGMH: "Mental Health",
     ERGEnvOps: "Environmental Operations",
     ERGEquity: "Equity",
     ERGCE: "Community Engagement",

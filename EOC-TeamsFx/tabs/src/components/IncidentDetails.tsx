@@ -730,33 +730,32 @@ class IncidentDetails extends React.PureComponent<IIncidentDetailsProps, IIncide
             }
             else {
                 defaultAdditionalChannels = [
-{ channelName: constants.defaultChannelConstants.Logistics, hasRegexError: false, regexErrorMessage: "" },
-{ channelName: constants.defaultChannelConstants.Planning, hasRegexError: false, regexErrorMessage: "" },
-{ channelName: constants.defaultChannelConstants.Recovery, hasRegexError: false, regexErrorMessage: "" },
-{ channelName: constants.defaultChannelConstants.ERGLNO, hasRegexError: false, regexErrorMessage: "" },
-{ channelName: constants.defaultChannelConstants.ERGIC, hasRegexError: false, regexErrorMessage: "" },
-{ channelName: constants.defaultChannelConstants.ERGPSA, hasRegexError: false, regexErrorMessage: "" },
-{ channelName: constants.defaultChannelConstants.ERGPIO, hasRegexError: false, regexErrorMessage: "" },
-{ channelName: constants.defaultChannelConstants.ERGPlanning, hasRegexError: false, regexErrorMessage: "" },
-{ channelName: constants.defaultChannelConstants.ERGFIN, hasRegexError: false, regexErrorMessage: "" },
-{ channelName: constants.defaultChannelConstants.ERGLOGS, hasRegexError: false, regexErrorMessage: "" },
-{ channelName: constants.defaultChannelConstants.ERGIT, hasRegexError: false, regexErrorMessage: "" },
-{ channelName: constants.defaultChannelConstants.ERGClinOps, hasRegexError: false, regexErrorMessage: "" },
-{ channelName: constants.defaultChannelConstants.ERGProvComms, hasRegexError: false, regexErrorMessage: "" },
-{ channelName: constants.defaultChannelConstants.ERGCHEFO, hasRegexError: false, regexErrorMessage: "" },
-{ channelName: constants.defaultChannelConstants.ERGHSSB, hasRegexError: false, regexErrorMessage: "" },
-{ channelName: constants.defaultChannelConstants.ERGLAB, hasRegexError: false, regexErrorMessage: "" },
-{ channelName: constants.defaultChannelConstants.ERGSurvEpi, hasRegexError: false, regexErrorMessage: "" },
-{ channelName: constants.defaultChannelConstants.ERGSafety, hasRegexError: false, regexErrorMessage: "" },
-{ channelName: constants.defaultChannelConstants.ERGLegal, hasRegexError: false, regexErrorMessage: "" },
-{ channelName: constants.defaultChannelConstants.ERGCOOP, hasRegexError: false, regexErrorMessage: "" },
-{ channelName: constants.defaultChannelConstants.ERGMH, hasRegexError: false, regexErrorMessage: "" },
-{ channelName: constants.defaultChannelConstants.ERGEnvOps, hasRegexError: false, regexErrorMessage: "" },
-{ channelName: constants.defaultChannelConstants.ERGEnvOps, hasRegexError: false, regexErrorMessage: "" },
-{ channelName: constants.defaultChannelConstants.ERGEquity, hasRegexError: false, regexErrorMessage: "" },
-{ channelName: constants.defaultChannelConstants.ERGCE, hasRegexError: false, regexErrorMessage: "" },
-{ channelName: constants.defaultChannelConstants.ERGSF, hasRegexError: false, regexErrorMessage: "" },
-{ channelName: constants.defaultChannelConstants.ERGIDT, hasRegexError: false, regexErrorMessage: "" }
+                    { channelName: constants.defaultChannelConstants.Logistics, hasRegexError: false, regexErrorMessage: "" },
+                    { channelName: constants.defaultChannelConstants.Planning, hasRegexError: false, regexErrorMessage: "" },
+                    { channelName: constants.defaultChannelConstants.Recovery, hasRegexError: false, regexErrorMessage: "" },
+                    { channelName: constants.defaultChannelConstants.ERGLNO, hasRegexError: false, regexErrorMessage: "" },
+                    { channelName: constants.defaultChannelConstants.ERGIC, hasRegexError: false, regexErrorMessage: "" },
+                    { channelName: constants.defaultChannelConstants.ERGPSA, hasRegexError: false, regexErrorMessage: "" },
+                    { channelName: constants.defaultChannelConstants.ERGPIO, hasRegexError: false, regexErrorMessage: "" },
+                    { channelName: constants.defaultChannelConstants.ERGPlanning, hasRegexError: false, regexErrorMessage: "" },
+                    { channelName: constants.defaultChannelConstants.ERGFIN, hasRegexError: false, regexErrorMessage: "" },
+                    { channelName: constants.defaultChannelConstants.ERGLOGS, hasRegexError: false, regexErrorMessage: "" },
+                    { channelName: constants.defaultChannelConstants.ERGIT, hasRegexError: false, regexErrorMessage: "" },
+                    { channelName: constants.defaultChannelConstants.ERGClinOps, hasRegexError: false, regexErrorMessage: "" },
+                    { channelName: constants.defaultChannelConstants.ERGProvComms, hasRegexError: false, regexErrorMessage: "" },
+                    { channelName: constants.defaultChannelConstants.ERGCHEFO, hasRegexError: false, regexErrorMessage: "" },
+                    { channelName: constants.defaultChannelConstants.ERGHSSB, hasRegexError: false, regexErrorMessage: "" },
+                    { channelName: constants.defaultChannelConstants.ERGLAB, hasRegexError: false, regexErrorMessage: "" },
+                    { channelName: constants.defaultChannelConstants.ERGSurvEpi, hasRegexError: false, regexErrorMessage: "" },
+                    { channelName: constants.defaultChannelConstants.ERGSafety, hasRegexError: false, regexErrorMessage: "" },
+                    { channelName: constants.defaultChannelConstants.ERGLegal, hasRegexError: false, regexErrorMessage: "" },
+                    { channelName: constants.defaultChannelConstants.ERGCOOP, hasRegexError: false, regexErrorMessage: "" },
+                    { channelName: constants.defaultChannelConstants.ERGMH, hasRegexError: false, regexErrorMessage: "" },
+                    { channelName: constants.defaultChannelConstants.ERGEnvOps, hasRegexError: false, regexErrorMessage: "" },
+                    { channelName: constants.defaultChannelConstants.ERGEquity, hasRegexError: false, regexErrorMessage: "" },
+                    { channelName: constants.defaultChannelConstants.ERGCE, hasRegexError: false, regexErrorMessage: "" },
+                    { channelName: constants.defaultChannelConstants.ERGSF, hasRegexError: false, regexErrorMessage: "" },
+                    { channelName: constants.defaultChannelConstants.ERGIDT, hasRegexError: false, regexErrorMessage: "" }
                 ];
             }
         }
@@ -2597,24 +2596,24 @@ class IncidentDetails extends React.PureComponent<IIncidentDetailsProps, IIncide
     //format team display name
     private formatTeamDisplayName = (incId: any, incDetails: any) => {
         //format team display name
-        let teamDisplayName = ``;
+        let teamDisplayName = `${incId}`;
         Object.keys(this.state.teamNameConfigArray).forEach((key: any) => {
             if (this.state.teamNameConfigArray[key] !== constants.teamNameConfigConstants.DontInclude) {
                 if (key === constants.teamNameConfigConstants.Prefix) {
                     //prefix should not be more than 10 characters
                     let prefixVal = this.state.prefixValue.substring(0, 11);
-                    teamDisplayName = teamDisplayName.concat(`${prefixVal}`)
+                    teamDisplayName = teamDisplayName.concat(`-${prefixVal}`)
                 }
                 if (key === constants.teamNameConfigConstants.IncidentName) {
-                    teamDisplayName = teamDisplayName.concat(`${incDetails.incidentName}`);
+                    teamDisplayName = teamDisplayName.concat(`-${incDetails.incidentName}`);
                 }
                 if (key === constants.teamNameConfigConstants.IncidentType) {
                     //incident type should not be more than 170 character
                     let incTypeVal = incDetails.incidentType.substring(0, 171);
-                    teamDisplayName = teamDisplayName.concat(`${incTypeVal}`);
+                    teamDisplayName = teamDisplayName.concat(`-${incTypeVal}`);
                 }
                 if (key === constants.teamNameConfigConstants.StartDate) {
-                    teamDisplayName = teamDisplayName.concat(`${incDetails.startDateTime}`);
+                    teamDisplayName = teamDisplayName.concat(`-${incDetails.startDateTime}`);
                 }
             }
         })
@@ -3480,94 +3479,97 @@ class IncidentDetails extends React.PureComponent<IIncidentDetailsProps, IIncide
                     ...this.state.incDetailsItem,
                     additionalTeamChannels: [
                         {
-                            channelName: constants.defaultChannelConstants.ERG-LOGS,
+                            channelName: constants.defaultChannelConstants.Logistics,
                             hasRegexError: false, regexErrorMessage: ""
                         },
                         {
-                            channelName: constants.defaultChannelConstants.ERG-Planning,
+                            channelName: constants.defaultChannelConstants.Planning,
                             hasRegexError: false, regexErrorMessage: ""
                         },
                         {
-                            channelName: constants.defaultChannelConstants.ERG-LNO,
+                            channelName: constants.defaultChannelConstants.ERGLNO,
+                            hasRegexError: false, regexErrorMessage: ""
+                        }, {
+                            channelName: constants.defaultChannelConstants.ERGIC,
+                            hasRegexError: false, regexErrorMessage: ""
+                        }, {
+                            channelName: constants.defaultChannelConstants.ERGPSA,
+                            hasRegexError: false, regexErrorMessage: ""
+                        }, {
+                            channelName: constants.defaultChannelConstants.ERGPIO,
+                            hasRegexError: false, regexErrorMessage: ""
+                        }, {
+                            channelName: constants.defaultChannelConstants.ERGPlanning,
+                            hasRegexError: false, regexErrorMessage: ""
+                        }, {
+                            channelName: constants.defaultChannelConstants.ERGFIN,
+                            hasRegexError: false, regexErrorMessage: ""
+                        }, {
+                            channelName: constants.defaultChannelConstants.ERGLOGS,
+                            hasRegexError: false, regexErrorMessage: ""
+                        }, {
+                            channelName: constants.defaultChannelConstants.ERGIT,
+                            hasRegexError: false, regexErrorMessage: ""
+                        }, {
+                            channelName: constants.defaultChannelConstants.ERGClinOps,
+                            hasRegexError: false, regexErrorMessage: ""
+                        }, {
+                            channelName: constants.defaultChannelConstants.ERGProvComms,
                             hasRegexError: false, regexErrorMessage: ""
                         },
                         {
-                            channelName: constants.defaultChannelConstants.ERG-IC,
+                            channelName: constants.defaultChannelConstants.ERGCHEFO,
                             hasRegexError: false, regexErrorMessage: ""
                         },
                         {
-                            channelName: constants.defaultChannelConstants.ERG-PSA,
+                            channelName: constants.defaultChannelConstants.ERGHSSB,
                             hasRegexError: false, regexErrorMessage: ""
                         },
-                                                {
-                            channelName: constants.defaultChannelConstants.ERG-PIO,
+                        {
+                            channelName: constants.defaultChannelConstants.ERGLAB,
                             hasRegexError: false, regexErrorMessage: ""
                         },
-                                                                        {
-                            channelName: constants.defaultChannelConstants.ERG-FIN,
+                        {
+                            channelName: constants.defaultChannelConstants.ERGSurvEpi,
                             hasRegexError: false, regexErrorMessage: ""
                         },
-                                                                                                {
-                            channelName: constants.defaultChannelConstants.ERG-IT,
+                        {
+                            channelName: constants.defaultChannelConstants.ERGSafety,
                             hasRegexError: false, regexErrorMessage: ""
                         },
-                                                                                                {
-                            channelName: constants.defaultChannelConstants.ERG-ClinOps,
+                        {
+                            channelName: constants.defaultChannelConstants.ERGLegal,
                             hasRegexError: false, regexErrorMessage: ""
-                        },    
-                                                                                                {
-                            channelName: constants.defaultChannelConstants.ERG-ProvComms,
+                        },
+                        {
+                            channelName: constants.defaultChannelConstants.ERGCOOP,
                             hasRegexError: false, regexErrorMessage: ""
-                        },  
-                                                                                                {
-                            channelName: constants.defaultChannelConstants.ERG-CHEFO,
+                        },
+                        {
+                            channelName: constants.defaultChannelConstants.ERGMH,
                             hasRegexError: false, regexErrorMessage: ""
-                        },                                                                            {
-                            channelName: constants.defaultChannelConstants.ERG-HSSB,
+                        },
+                        {
+                            channelName: constants.defaultChannelConstants.ERGEnvOps,
                             hasRegexError: false, regexErrorMessage: ""
-                        },    
-                                                                                                {
-                            channelName: constants.defaultChannelConstants.ERG-LAB,
+                        },
+                        {
+                            channelName: constants.defaultChannelConstants.ERGEquity,
                             hasRegexError: false, regexErrorMessage: ""
-                        },    
-                                                                                                {
-                            channelName: constants.defaultChannelConstants.ERG-SurvEpi,
+                        },
+                        {
+                            channelName: constants.defaultChannelConstants.ERGCE,
                             hasRegexError: false, regexErrorMessage: ""
-                        },    
-                                                                                                {
-                            channelName: constants.defaultChannelConstants.ERG-Safety,
+                        },                        {
+                            channelName: constants.defaultChannelConstants.ERGSF,
                             hasRegexError: false, regexErrorMessage: ""
-                        },    
-                                                                                                {
-                            channelName: constants.defaultChannelConstants.ERG-Legal,
+                        },
+                        {
+                            channelName: constants.defaultChannelConstants.ERGIDT,
                             hasRegexError: false, regexErrorMessage: ""
-                        },    
-                                                                                                {
-                            channelName: constants.defaultChannelConstants.ERG-COOP,
-                            hasRegexError: false, regexErrorMessage: ""
-                        },    
-                                                                                                {
-                            channelName: constants.defaultChannelConstants.ERG-MH,
-                            hasRegexError: false, regexErrorMessage: ""
-                        },    
-                                                                                                {
-                            channelName: constants.defaultChannelConstants.ERG-EnvOps,
-                            hasRegexError: false, regexErrorMessage: ""
-                        },    
-                                                                                                {
-                            channelName: constants.defaultChannelConstants.ERG-Equity,
-                            hasRegexError: false, regexErrorMessage: ""
-                        },    
-                                                                                                {
-                            channelName: constants.defaultChannelConstants.ERG-CE,
-                            hasRegexError: false, regexErrorMessage: ""
-                        },    
-                                                                                                {
-                            channelName: constants.defaultChannelConstants.ERG-SF,
-                            hasRegexError: false, regexErrorMessage: ""
-                        },    
-                                                                                                {
-                            channelName: constants.defaultChannelConstants.ERG-IDT,
+                        },
+                        {
+                            channelName: constants.defaultChannelConstants.Recovery,
                             hasRegexError: false, regexErrorMessage: ""
                         }
                     ]
