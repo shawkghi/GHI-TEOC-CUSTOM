@@ -2596,24 +2596,24 @@ class IncidentDetails extends React.PureComponent<IIncidentDetailsProps, IIncide
     //format team display name
     private formatTeamDisplayName = (incId: any, incDetails: any) => {
         //format team display name
-        let teamDisplayName = ` `;
+        let teamDisplayName = `${incId}`;
         Object.keys(this.state.teamNameConfigArray).forEach((key: any) => {
             if (this.state.teamNameConfigArray[key] !== constants.teamNameConfigConstants.DontInclude) {
                 if (key === constants.teamNameConfigConstants.Prefix) {
                     //prefix should not be more than 10 characters
                     let prefixVal = this.state.prefixValue.substring(0, 11);
-                    teamDisplayName = `${prefixVal}`;
+                    teamDisplayName = teamDisplayName.concat(`-${prefixVal}`)
                 }
                 if (key === constants.teamNameConfigConstants.IncidentName) {
-                    teamDisplayName = `${incDetails.incidentName}`;
+                    teamDisplayName = teamDisplayName.concat(`-${incDetails.incidentName}`);
                 }
                 if (key === constants.teamNameConfigConstants.IncidentType) {
                     //incident type should not be more than 170 character
                     let incTypeVal = incDetails.incidentType.substring(0, 171);
-                    teamDisplayName = `${incTypeVal}`;
+                    teamDisplayName = teamDisplayName.concat(`-${incTypeVal}`);
                 }
                 if (key === constants.teamNameConfigConstants.StartDate) {
-                    teamDisplayName = `${incDetails.startDateTime}`;
+                    teamDisplayName = teamDisplayName.concat(`-${incDetails.startDateTime}`);
                 }
             }
         })
