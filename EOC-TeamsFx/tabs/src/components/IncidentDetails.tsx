@@ -2602,7 +2602,7 @@ class IncidentDetails extends React.PureComponent<IIncidentDetailsProps, IIncide
                 if (key === constants.teamNameConfigConstants.Prefix) {
                     //prefix should not be more than 10 characters
                     let prefixVal = this.state.prefixValue.substring(0, 11);
-                    teamDisplayName = `${prefixVal}`
+                    teamDisplayName = `${prefixVal}`;
                 }
                 if (key === constants.teamNameConfigConstants.IncidentName) {
                     teamDisplayName = `${incDetails.incidentName}`;
