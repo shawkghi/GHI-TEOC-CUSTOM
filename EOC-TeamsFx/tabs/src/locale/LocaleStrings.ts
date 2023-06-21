@@ -131,7 +131,11 @@ const localizedStrings = {
                 incidentNameLabel: "Incident Name",
                 previewLabel: "Preview",
                 btnSaveChanges: "Save Changes",
-                formTitleTeamNameConfig: "Team Name Configuration",
+        formTitle
+                
+        
+        
+        Config: "Team Name Configuration",
                 labelTeamNameConfig: "Manage Team Name Configuration",
                 updatedConfigSuccessMessage: "Team Name Configuration Updated Successfully!",
                 updatedConfigErrorMessage: "Please try to update Team Name Configuration again.",
