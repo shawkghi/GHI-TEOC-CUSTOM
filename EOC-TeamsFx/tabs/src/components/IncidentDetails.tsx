@@ -2596,7 +2596,7 @@ class IncidentDetails extends React.PureComponent<IIncidentDetailsProps, IIncide
     //format team display name
     private formatTeamDisplayName = (incId: any, incDetails: any) => {
         //format team display name
-        let teamDisplayName = ``;
+        let teamDisplayName = ` `;
         Object.keys(this.state.teamNameConfigArray).forEach((key: any) => {
             if (this.state.teamNameConfigArray[key] !== constants.teamNameConfigConstants.DontInclude) {
                 if (key === constants.teamNameConfigConstants.Prefix) {
