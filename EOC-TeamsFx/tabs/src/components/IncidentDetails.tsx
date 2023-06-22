@@ -3489,31 +3489,40 @@ class IncidentDetails extends React.PureComponent<IIncidentDetailsProps, IIncide
                         {
                             channelName: constants.defaultChannelConstants.ERGLNO,
                             hasRegexError: false, regexErrorMessage: ""
-                        }, {
+                        },
+                        {
                             channelName: constants.defaultChannelConstants.ERGIC,
                             hasRegexError: false, regexErrorMessage: ""
-                        }, {
+                        },
+                        {
                             channelName: constants.defaultChannelConstants.ERGPSA,
                             hasRegexError: false, regexErrorMessage: ""
-                        }, {
+                        },
+                        {
                             channelName: constants.defaultChannelConstants.ERGPIO,
                             hasRegexError: false, regexErrorMessage: ""
-                        }, {
+                        },
+                        {
                             channelName: constants.defaultChannelConstants.ERGPlanning,
                             hasRegexError: false, regexErrorMessage: ""
-                        }, {
+                        },
+                        {
                             channelName: constants.defaultChannelConstants.ERGFIN,
                             hasRegexError: false, regexErrorMessage: ""
-                        }, {
+                        },
+                        {
                             channelName: constants.defaultChannelConstants.ERGLOGS,
                             hasRegexError: false, regexErrorMessage: ""
-                        }, {
+                        },
+                        {
                             channelName: constants.defaultChannelConstants.ERGIT,
                             hasRegexError: false, regexErrorMessage: ""
-                        }, {
+                        },
+                        {
                             channelName: constants.defaultChannelConstants.ERGClinOps,
                             hasRegexError: false, regexErrorMessage: ""
-                        }, {
+                        },
+                        {
                             channelName: constants.defaultChannelConstants.ERGProvComms,
                             hasRegexError: false, regexErrorMessage: ""
                         },
@@ -3560,7 +3569,8 @@ class IncidentDetails extends React.PureComponent<IIncidentDetailsProps, IIncide
                         {
                             channelName: constants.defaultChannelConstants.ERGCE,
                             hasRegexError: false, regexErrorMessage: ""
-                        },                        {
+                        },
+                        {
                             channelName: constants.defaultChannelConstants.ERGSF,
                             hasRegexError: false, regexErrorMessage: ""
                         },
